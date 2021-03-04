@@ -10,7 +10,7 @@ nltk.download('wordnet')
 stemmer = PorterStemmer()
 lemmatizer = WordNetLemmatizer()
 
-def lemmatize_stemming(inputText):
+def lemmatize_stemming(input_text):
     
     """ Turn a word into it's original, dictionary form (i.e. turning fried into fry)
     
@@ -33,7 +33,7 @@ def lemmatize_stemming(inputText):
 
 def preprocess(input_text):
     
-     """ Turn a word into it's original, dictionary form (i.e. turning fried into fry)
+    """ Turn a word into it's original, dictionary form (i.e. turning fried into fry)
     
     Parameters
     ----------

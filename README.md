@@ -25,6 +25,10 @@ virtualenv venv_1
 source venv_1/bin/activate
 ```
 
+Check to make sure that the current virtual environment is activated by typing the following in the terminal (It should say **/venv_1/bin/python**):
+```
+which python
+```
 Once the environment is activated, navigate to the **project's root directory**, then run this command in the terminal:
 ```
 pip install -r requirements.txt
@@ -39,5 +43,19 @@ Run the following command from the terminal to start the **Jupyter Lab** IDE:
 jupyter-lab
 ```
 
-In the project root folder, open the **/notebooks/topic_modelling_instagram.ipnyb** file.<br>
-To run a cell block in the notebook file, press the **Shift + Enter** key (Windows) on your keyboard, or press the **play button** in the top console.
+Open a browser, than enter **http://localhost:8888/** to open the Jupyter Lab interface.<br>
+Navigate to the project's root directory, the go open **/notebooks/topic_modelling_instagram.ipnyb** file.<br>
+To run a cell block in the notebook file, press the **Shift + Enter** key on your keyboard, or press the **play button** in the top console.
+
+# Additional Notes
+
+## Adding a virtual environment to Jupyter Lab
+If you'd like to add a new Jupyter Notebook or python file to the current virtual environment, you'll need to add the virtual environment as kernel to the Jupyter with the following command in your terminal (from still within the virtual environment):
+```
+python -m ipykernel install --user --name=venv_1
+```
+
+The virtual environment should now be added as an option in the Jupyter Lab interface to create a Notebook or python file.
+
+## Shutting down Jupyter Lab
+Just press **Ctrl** + **C** on your keyboard twice to confirm the shutting down the Jupyter Lab interface.

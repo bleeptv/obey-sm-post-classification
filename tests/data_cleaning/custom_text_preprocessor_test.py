@@ -28,22 +28,22 @@ def test_when_inputTextContainsAnNoEAtTheEnd_expect_inputTextToBeStemmed():
 def test_when_inputTextContainsAStopWord_expext_stopWordToBeRemovedFromPreProcessedList():
     #Arrange
     input_text = "the newest town"
-    expected_preprocced_list = ["newest", "town"]
+    expected_preprocessed_list = ["newest", "town"]
     
     #Act
     actual_preprocessed_list = preprocess(input_text)
     
     #Assert
-    assert expected_preprocced_list == actual_preprocessed_list
+    assert expected_preprocessed_list == actual_preprocessed_list
     
 
 def test_when_inputTextContainsPunctuation_expext_outputListToStripOutPunctuation():
     #Arrange
     input_text = "That's not cool my ai rap brother. It's Abraham's laptop, right?"
-    expected_preprocced_list = ["cool", "ai", "rap", "brother", "abraham", "laptop", "right"]
+    expected_preprocessed_list = ["cool", "ai", "rap", "brother", "abraham", "laptop", "right"]
     
     #Act
     actual_preprocessed_list = preprocess(input_text)
     
     #Assert
-    assert expected_preprocced_list == actual_preprocessed_list
+    assert expected_preprocessed_list == actual_preprocessed_list

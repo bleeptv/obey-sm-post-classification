@@ -35,24 +35,12 @@ def test_when_inputTextContainsAStopWord_expext_stopWordToBeRemovedFromPreProces
     
     #Assert
     assert expected_preprocced_list == actual_preprocessed_list
-
-    
-def test_when_inputTextContainsTextTokensLessThan4Characters_expext_tokensToBeRemovedFromPreProcessedList():
-    #Arrange
-    input_text = "ok inform bra interact"
-    expected_preprocced_list = ["inform", "interact"]
-    
-    #Act
-    actual_preprocessed_list = preprocess(input_text)
-    
-    #Assert
-    assert expected_preprocced_list == actual_preprocessed_list
     
 
 def test_when_inputTextContainsPunctuation_expext_outputListToStripOutPunctuation():
     #Arrange
-    input_text = "That's not cool brother. It's Abraham's laptop, right?"
-    expected_preprocced_list = ["cool", "brother", "abraham", "laptop", "right"]
+    input_text = "That's not cool my ai rap brother. It's Abraham's laptop, right?"
+    expected_preprocced_list = ["cool", "ai", "rap", "brother", "abraham", "laptop", "right"]
     
     #Act
     actual_preprocessed_list = preprocess(input_text)

@@ -47,10 +47,10 @@ def preprocess(input_text):
         
     """
     result = []
-    stripped_text = strip_punctuation(input_text).split(" ")
+    stripped_text = strip_punctuation(input_text.lower()).split(" ")
     filtered_stripped_text = filter(None, stripped_text)
     
     for token in filtered_stripped_text:
-        if token not in STOPWORDS and len(token) > 3:
+        if token not in STOPWORDS and len(token) > 1:
             result.append(lemmatize_stemming(token))
     return result

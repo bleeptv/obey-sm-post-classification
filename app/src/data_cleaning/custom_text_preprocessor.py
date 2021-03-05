@@ -47,7 +47,7 @@ def preprocess(input_text):
         
     """
     result = []
-    stripped_text = strip_punctuation(input_text).split(" ")
+    stripped_text = strip_punctuation(input_text.lower()).split(" ")
     filtered_stripped_text = filter(None, stripped_text)
     
     for token in filtered_stripped_text:
